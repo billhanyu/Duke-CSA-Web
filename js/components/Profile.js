@@ -7,7 +7,7 @@ class Profile extends React.Component {
       <div className="ui profile">
         <img
           className="ui profile profilePic"
-          src=this.props.profilePicURL
+          src={this.props.profilePicURL}
           alt="Profile Pciture"
         />
         <div className="ui profile name">
@@ -27,4 +27,4 @@ Profile.propTypes = {
   responsibility: PropTypes.string
 }
 
-export default Header;
+export default Profile;
