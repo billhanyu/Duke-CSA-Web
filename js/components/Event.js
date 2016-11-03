@@ -2,9 +2,13 @@ import React from 'react';
 import {render} from 'react-dom';
 
 class Event extends React.Component {
+
   render() {
     return (
       <div className="ui event">
+        <h4>{this.props.data.get("title")}</h4><br/>
+        <span>{this.props.data.get("detail")}</span>
+        <br/><br/></div>
         // if (this.props.picurl) {
         //   <img
         //     src=this.props.picurl
@@ -12,9 +16,9 @@ class Event extends React.Component {
         //     className="ui event picurl"
         //   />
         // }
-        <span className="ui event title">
-          {this.props.title}
-        </span>
+        //<span className="ui event title">
+        //  {this.props.title}
+        //</span>
         // <span className="ui event time">
         //   {this.props.time}
         // </span>
@@ -26,18 +30,8 @@ class Event extends React.Component {
         //     Sign Up
         //   </a>
         // }
-      </div>
     );
   }
-}
-
-Event.propTypes = {
-  title: PropTypes.string,
-  // time: PropTypes.string,
-  // location: PropTypes.string,
-  // detail: PropTypes.string,
-  // signupurl: PropTypes.string,
-  // picurl: PropTypes.string
 }
 
 export default Event;
