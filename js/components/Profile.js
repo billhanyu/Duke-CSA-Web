@@ -9,6 +9,8 @@ class Profile extends React.Component {
           className="ui profile profilePic"
           src={this.props.profilePicURL}
           alt="Profile Pciture"
+          height="150"
+          width="150"
         />
         <div className="ui profile name">
           {this.props.name}

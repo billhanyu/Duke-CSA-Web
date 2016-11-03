@@ -4,10 +4,21 @@ import {render} from 'react-dom';
 class Event extends React.Component {
 
   render() {
+    const profilePic = this.props.data.get("profilePic");
     return (
       <div className="ui event">
         <h4>{this.props.data.get("title")}</h4><br/>
         <span>{this.props.data.get("detail")}</span>
+        {profilePic ? (
+          <img
+            src={profilePic.url()}
+            alt="event profile picture"
+            width="300"
+            height="200"
+          />
+        ) : (
+          <br/>
+        )}
         <br/><br/></div>
         // if (this.props.picurl) {
         //   <img
